@@ -1,35 +1,15 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
-import { Entypo } from "@expo/vector-icons";
+import { ScrollView } from "react-native";
 import styles from "./styles";
+import HeaderMain from "../../components/HeaderMain";
+import BannerCarousel from "../../components/BannerCarousel";
 
 function index() {
   return (
-    <View style={styles.headerMain}>
-      <View style={styles.headerOne}>
-        <Image
-          style={styles.image}
-          source={{ uri: "https://cdn.getir.com/misc/emoji/house.png" }}
-        />
-        <View style={styles.headerOneView}>
-          <Text style={styles.addressName}>Ev</Text>
-          <Text style={styles.address}>
-            Dedepaşa Blv. Yenişehir Mahallesi...
-          </Text>
-          <Entypo name="chevron-right" size={24} color="#5D3EBD" />
-        </View>
-
-        <View style={styles.headerTwo}>
-          <Text style={styles.tvs}>TVS</Text>
-          <Text style={styles.counter}>
-            13
-            <Text style={styles.minutes}>dk</Text>
-          </Text>
-        </View>
-      </View>
-
-      <View></View>
-    </View>
+    <ScrollView stickyHeaderIndices={[0]} style={styles.ScrollWiew}>
+      <HeaderMain />
+      <BannerCarousel />
+    </ScrollView>
   );
 }
 
