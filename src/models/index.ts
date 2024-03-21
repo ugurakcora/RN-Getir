@@ -1,5 +1,5 @@
 export declare class Category {
-  readonly id: number;
+  readonly id: string;
   readonly name: string;
   readonly src: string;
   readonly subCategories: string[];
